@@ -64,12 +64,6 @@ App({
   globalData: {
     // 用户基本信息
     userInfo: null,
-    // 用户列表
-    userList: {
-      btc: [],
-      ltc: [],
-      xmr: []
-    },
     // 当前选中的子用户数据
     currentUser: null
   }
