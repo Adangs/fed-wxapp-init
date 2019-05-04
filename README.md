@@ -9,4 +9,4 @@
 - [x] filters
 - [x] less（vscode Easy WXLESS）
 
-<img width='100%' src='./demo.png'>
+<img width='50%' src='./demo.png'>
