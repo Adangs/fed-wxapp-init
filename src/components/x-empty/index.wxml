@@ -1,0 +1,11 @@
+<!-- src/components/x-empty/index.wxml -->
+<view class="x-class x-empty">
+  <view class="content">
+    <view class="pic">
+      <image mode="aspectFit" src="{{src}}"></image>
+    </view>
+    <view class="text">
+      <slot></slot>
+    </view>
+  </view>
+</view>

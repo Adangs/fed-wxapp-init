@@ -1,0 +1,2 @@
+<!--components/x-mask/index.wxml-->
+<view class="m-mask {{show ? 'is-show': ''}}" wx:if="{{show}}" style="z-index: {{zindex}}" />

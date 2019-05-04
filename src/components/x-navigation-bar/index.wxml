@@ -1,0 +1,16 @@
+<view class="x-class x-navigation-bar" style='padding-top:{{barHeight}}px;'>
+  <view class="placeholder {{refresh ? 'is-refresh' : ''}}" />
+  <view class="content">
+    <!--状态栏-->
+    <view class="bar" bindtap="onBar" style="height: {{barHeight}}px;"></view>
+    <!--标题-->
+    <view class="title {{titleClass}}">
+      <block wx:if="{{isBack}}">
+        <view class="icon" bindtap="onNavigateBack">
+          <x-icon class="x-icon" type="icon-023" size="38" />
+        </view>
+      </block>
+      <view class="name"><slot></slot></view>
+    </view>
+  </view>
+</view>

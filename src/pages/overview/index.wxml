@@ -1,0 +1,87 @@
+<!--src/pages/overview/index.wxml-->
+<view class="m-overview-all {{!isScroll ? 'fixed-scroll' : ''}}">
+  <x-navigation-bar>DEMO</x-navigation-bar>
+  <!-- 全局用户头部 -->
+  <x-header bind:load="onLoadHeader" bind:show="onShowHeader" bind:change="onChangeHeader"/>
+  <!-- 业务内容 -->
+  <block wx:if="{{isEmpty}}">
+    <!-- 无告警显示界面 -->
+    <x-empty class="m-x-empty" wx:if="{{isEmpty}}">暂无数据~</x-empty>
+  </block>
+  <block wx:else>
+    <view class="m-overview">
+        <view class="body">
+          <!-- 算力信息 -->
+          <x-card class="m-x-card" icon="icon-019" title="算力信息">
+            <view slot="content">
+              <view class="ul">
+                <view class="li">
+                  <view class="em">10分钟算力</view>
+                  <view class="p">{{hash.recent}}</view>
+                </view>
+                <view class="li">
+                  <view class="em">24小时算力</view>
+                  <view class="p">{{hash.h24}}</view>
+                </view>
+              </view>
+            </view>
+          </x-card>
+          <!-- 矿机状态 -->
+          <x-card class="m-x-card" icon="icon-020" title="矿机状态">
+            <view slot="content">
+              <view class="ul">
+                <view class="li">
+                  <view class="em">矿机总数</view>
+                  <view class="p">{{worker.total}}</view>
+                </view>
+                <view class="li">
+                  <view class="em">工作中</view>
+                  <view class="p">{{worker.online}}</view>
+                </view>
+                <view class="li">
+                  <view class="em">未工作</view>
+                  <view class="p">{{worker.offline}}</view>
+                </view>
+              </view>
+            </view>
+          </x-card>
+          <!-- 收益 -->
+          <x-card class="m-x-card" icon="icon-021" title="收益">
+            <view slot="content">
+              <view class="ul">
+                <view class="li">
+                  <view class="em" data-type="today" bindtap="onShowTips">
+                    <text>今日待分币</text>
+                    <icon type="info_circle" size="15" color="#33CC99" />
+                  </view>
+                  <block wx:if="{{income.todayIncome}}">
+                    <view class="p">{{income.todayIncome}} {{coinType}}</view>
+                  </block>
+                </view>
+                <view class="li">
+                  <view class="em" data-type="yesterday" bindtap="onShowTips">
+                    <text>昨日实收</text>
+                    <icon type="info_circle" size="15" color="#33CC99" />
+                  </view>
+                  <block wx:if="{{income.yesterdayIncome}}">
+                    <view class="p">{{income.yesterdayIncome}} {{coinType}}</view>
+                  </block>
+                </view>
+              </view>
+            </view>
+          </x-card>
+          <!-- 算力图表 -->
+          <x-card class="m-x-card" icon="icon-022" title="算力图表">
+            <view class="suffix" slot="header-suffix">
+              <x-switch value="{{chartTag}}" bind:change="onChangeChart" />
+            </view>
+            <view class="m-x-charts" slot="content">
+              <block wx:if="{{chart}}">
+                <ec-canvas class="m-chart" ec="{{ chart }}"></ec-canvas>
+              </block>
+            </view>
+          </x-card>
+        </view>
+    </view>
+  </block>
+</view>

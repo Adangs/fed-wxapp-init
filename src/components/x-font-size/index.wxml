@@ -1,0 +1,2 @@
+<!--components/x-font-size/index.wxml-->
+<text style="font-size: {{fontSize}}rpx;">{{value}}</text>

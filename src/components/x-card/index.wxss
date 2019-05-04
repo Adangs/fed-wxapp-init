@@ -1,0 +1,29 @@
+.x-card {
+  background-color: #fff;
+  overflow: hidden;
+}
+.x-card .header {
+  display: flex;
+  box-align: center;
+  align-items: center;
+  height: 100rpx;
+  padding: 0 30rpx;
+  font-size: 34rpx;
+}
+.x-card .header .x-icon {
+  font-size: 40rpx;
+  width: 40rpx;
+  height: 40rpx;
+  color: #33CC99;
+  margin-right: 20rpx;
+}
+.x-card .footer {
+  border-top: 1rpx solid #E5E5E5;
+}
+.x-card.is-line .header {
+  border-bottom: 1rpx solid #E5E5E5;
+}
+.x-card.is-radius {
+  border-radius: 10rpx;
+  box-shadow: 0 10rpx 20rpx rgba(0, 35, 30, 0.05);
+}

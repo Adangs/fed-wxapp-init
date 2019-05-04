@@ -1,0 +1,39 @@
+.x-switch {
+  display: inline-block;
+  font-size: 24rpx;
+  position: relative;
+  background-color: #EBEBEB;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.x-switch .bg {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #33CC99;
+  border-radius: 30rpx;
+  transition: .2s;
+}
+.x-switch .bg.bg-active-1 {
+  left: 50%;
+}
+.x-switch .ul {
+  display: flex;
+  box-align: center;
+  align-items: center;
+  position: relative;
+}
+.x-switch .ul .li {
+  min-width: 98rpx;
+  text-align: center;
+  color: #888;
+  transition: .2s;
+}
+.x-switch .ul .li.active {
+  color: #fff;
+}

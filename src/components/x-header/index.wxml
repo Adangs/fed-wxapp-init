@@ -1,0 +1,57 @@
+<!--components/x-header/index.wxml-->
+<!-- 蒙板 -->
+<x-mask show="{{show}}" bindtap="onHideList"/>
+<view class="x-class x-header">
+  <view class="content {{show ? 'is-show is-' + currentType : ''}}">
+    <view class="li currency">
+      <!-- 币种选择 -->
+      <view class="select" data-type="currency" bindtap="onShowList">
+        <view class="inline">
+          <view class="flex">
+            <!-- 币种小图标 -->
+            <x-icon class="{{currency.icon}}" x-class="m-x-icon" type="{{currency.icon}}" />
+            <!-- 显示内容 -->
+            <text class="name">{{currency.name || currency.value}}</text>
+          </view>
+        </view>
+        <!-- 小箭头 -->
+        <x-icon x-class="m-x-icon-arrow" type="icon-025" />
+      </view>
+    </view>
+    <view class="li user">
+      <!-- 用户选择 -->
+      <view class="select" data-type="user" bindtap="onShowList">
+        <view class="inline">
+          <view class="flex">
+            <block wx:if="{{user}}">
+              <x-icon class="icon-018" x-class="m-x-icon" type="icon-018" />
+              <!-- 显示内容 -->
+              <x-font-size class="name" value="{{user.name || user.value}}" />
+            </block>
+            <block wx:else>
+              <text class="name">暂无账户</text>
+            </block>
+          </view>
+        </view>
+        <!-- 小箭头 -->
+        <x-icon x-class="m-x-icon-arrow" type="icon-025" />
+      </view>
+    </view>
+  </view>
+  <!-- 选择列表 -->
+  <scroll-view scroll-y class="list {{show ? 'is-show' : ''}}" wx:if="{{show}}" >
+    <view class="option" wx:for="{{showList}}" wx:key="{{item.value}}" data-value="{{item.value}}" bindtap="onChange">
+      <view class="inline">
+        <view class="flex">
+          <!-- 币种小图标 -->
+          <block wx:if="{{item.icon}}">
+            <x-icon class="{{item.icon}}" x-class="m-x-icon" type="{{item.icon}}" />
+          </block>
+          <!-- 显示内容 -->
+          <text class="name">{{item.name || item.value}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+

@@ -1,0 +1,29 @@
+/** 全局样式 **/
+page{ color: #353535; background-color: #F5F5F5; }
+page, input { font-size: 32rpx; } 
+
+/** 重置按钮样式 **/
+button[type=primary]{ background-color: #33CC99;}
+button[disabled][type=primary]{ background-color: rgba(51,204,153,.6); }
+.button-hover[type=primary]{ background-color: rgba(51,204,153,.9); }
+
+/** m-form **/
+.m-form{
+  > .flex,
+  .input__suffix{ display: flex; }
+  .li{ 
+    border-bottom: 1rpx solid #E5E5E5; box-sizing: border-box; height: 120rpx; line-height: 120rpx; overflow: hidden; position: relative;
+    input{ height: 120rpx; padding: 0 10rpx;}
+    picker{ padding: 0 10rpx; min-width: 96rpx; }
+    .input__suffix{ line-height: 120rpx; padding: 0 10rpx;}
+    x-icon{ padding: 0 10rpx;}
+    &.flex-1{ flex: 1;}
+    &:first-child{ margin-right: 32rpx;}
+    &:last-child{ margin-left: 0;}
+  }
+  .code{ 
+    image{ width: 190rpx; height: 120rpx; }
+  }
+} 
+
+/** m-header **/

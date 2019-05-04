@@ -1,0 +1,42 @@
+page{ height: 100%;}
+// 因为小程序canvas的原因，不能使用 flex布局，所以通过暂时通过控制滚动去做处理
+.m-overview-all{
+  &.fixed-scroll{ 
+    height: 100%; overflow: hidden;
+    .m-chart { display: none;}
+  }
+}
+.m-overview{
+  // 空白界面
+  .m-x-empty{ display: block; height: 100%; position: relative;}
+  // 业务内容
+  .body{
+    padding-top: 20rpx;
+    .m-x-card{ padding-bottom: 20rpx; display: block;}
+    .x-card{
+      .header{ 
+        .suffix{ flex: 1; text-align: right; }
+      }
+      .content{ 
+        padding: 0 30rpx 30rpx;
+        .ul{ display: flex; box-align: center; align-items: center; padding-top: 10rpx;}
+        .li{ 
+          flex: 1; border-right: 1rpx solid #E5E5E5; padding-left: 40rpx;
+          &:first-child{ padding-left: 0;}
+          &:last-child{ border-right: 0;}
+        }
+        .em{ 
+          color: #B2B2B2; font-size: 24rpx; display: flex; box-align: center; align-items: center;
+          text{ padding-right: 10rpx;}
+        }
+        .p{ 
+          padding: 5rpx 0;
+          text{ padding-right: 8rpx;}
+        }
+      }
+    }
+    .m-x-charts{ 
+      height: 500rpx; position: relative;
+    }
+  }
+}

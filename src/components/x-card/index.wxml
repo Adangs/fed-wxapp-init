@@ -1,0 +1,25 @@
+<!--components/x-card/index.wxml-->
+<!-- is-line 标题下边框线样式，is-radius 圆角投影样式 -->
+<view class="x-class x-card {{line ? 'is-line' : ''}} {{radius ? 'is-radius' : ''}}">
+  <view class="header">
+    <!-- 是否显示icon -->
+    <block wx:if="{{icon}}">
+      <x-icon x-class="x-icon" type="{{icon}}"/>
+    </block>
+    <!-- 属性标题优先与title slot -->
+    <block wx:if="{{title}}">
+      <text>{{title}}</text>
+      <slot name="header-suffix"></slot>
+    </block>
+    <block wx:else>
+      <slot name="header"></slot>
+    </block>
+  </view>
+  <view class="content">
+    <slot name="content"></slot>
+  </view>
+  <!-- 有footer属性才能显示footer slot -->
+  <view wx:if="{{footer}}" class="footer">
+    <slot name="footer"></slot>
+  </view>
+</view>

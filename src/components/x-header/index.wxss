@@ -1,0 +1,136 @@
+.x-header {
+  box-sizing: border-box;
+  height: 120rpx;
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 10rpx 16rpx rgba(0, 35, 30, 0.05);
+  padding: 20rpx 15rpx;
+}
+.x-header .inline {
+  display: inline-block;
+  height: 100%;
+}
+.x-header .flex {
+  display: flex;
+  box-align: center;
+  align-items: center;
+  height: 100%;
+}
+.x-header .flex .name {
+  display: inline-block;
+  padding: 0 22rpx;
+}
+.x-header .m-x-icon {
+  font-size: 40rpx;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.x-header .icon-015 {
+  color: #FF950A;
+}
+.x-header .icon-016 {
+  color: #3978D3;
+}
+.x-header .icon-017 {
+  color: #FF6600;
+}
+.x-header .icon-018 {
+  color: #6D9EFF;
+}
+.x-header .m-x-icon-arrow {
+  font-size: 23rpx;
+  width: 23rpx;
+  height: 23rpx;
+  line-height: 23rpx;
+  color: #D6D5D6;
+  position: absolute;
+  right: 40rpx;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  transition: .2s;
+}
+.x-header .content {
+  display: flex;
+  flex-wrap: wrap;
+  box-align: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+.x-header .content.is-currency .currency {
+  width: 100%;
+}
+.x-header .content.is-currency .user {
+  width: 0;
+  padding: 0;
+  opacity: 0;
+}
+.x-header .content.is-user .user {
+  width: 100%;
+}
+.x-header .content.is-user .currency {
+  width: 0;
+  padding: 0;
+  opacity: 0;
+}
+.x-header .content.is-show {
+  text-align: center;
+}
+.x-header .content.is-show .m-x-icon-arrow {
+  transform: rotate(90deg);
+  margin-top: -10rpx;
+}
+.x-header .content .li {
+  width: 50%;
+  height: 100%;
+  padding: 0 15rpx;
+  transition: .2s;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.x-header .content .select {
+  width: 100%;
+  background: rgba(214, 213, 214, 0.2);
+  border: 1rpx solid rgba(178, 178, 178, 0.2);
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  border-radius: 40rpx;
+  padding: 0 20rpx;
+  position: relative;
+}
+.x-header .content .select:active {
+  opacity: .9;
+}
+.x-header .list {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  left: 0;
+  top: 120rpx;
+  max-height: 440rpx;
+}
+.x-header .list.is-show {
+  animation: show .3s;
+}
+.x-header .list .option {
+  border-top: 1rpx solid #E5E5E5;
+  height: 88rpx;
+  text-align: center;
+  box-sizing: border-box;
+}
+.x-header .list .option:active {
+  background-color: #F9FDFF;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

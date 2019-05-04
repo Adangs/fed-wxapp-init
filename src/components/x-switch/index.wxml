@@ -1,0 +1,9 @@
+<!--src/components/x-switch/index.wxml-->
+<view class="x-class x-switch">
+  <view class="bg {{'bg-active-' + active}}" />
+  <view class="ul">
+    <block wx:for="{{value}}" wx:key="{{item.value || item}}" wx:for-index="index">
+      <view class="li {{active === index ? 'active' : ''}}" data-index="{{index}}" bindtap="onChange">{{item.name || item}}</view>
+    </block>
+  </view>
+</view>

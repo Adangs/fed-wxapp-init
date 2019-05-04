@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/overview/index",
+    "pages/alarm/index"
+  ],
+  "usingComponents": {
+    "ec-canvas": "components/ec-canvas/ec-canvas",
+    "x-card": "components/x-card/index",
+    "x-empty": "components/x-empty/index",
+    "x-font-size": "components/x-font-size/index",
+    "x-mask": "components/x-mask/index",
+    "x-header": "components/x-header/index",
+    "x-switch": "components/x-switch/index",
+    "x-navigation-bar": "components/x-navigation-bar/index",
+    "x-icon": "components/x-icon/index"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#33cc99",
+    "navigationBarTitleText": "2009POOL",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#b2b2b2",
+    "selectedColor": "#33cc99",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/alarm/index",
+        "text": "DEMO",
+        "iconPath": "assets/images/tab-bar-01.png",
+        "selectedIconPath": "assets/images/tab-bar-02.png"
+      },
+      {
+        "pagePath": "pages/overview/index",
+        "text": "DEMO",
+        "iconPath": "assets/images/tab-bar-03.png",
+        "selectedIconPath": "assets/images/tab-bar-04.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "we-okkong",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --fix **/*.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0"
+  }
+}

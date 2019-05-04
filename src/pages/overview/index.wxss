@@ -1,0 +1,66 @@
+page {
+  height: 100%;
+}
+.m-overview-all.fixed-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+.m-overview-all.fixed-scroll .m-chart {
+  display: none;
+}
+.m-overview .m-x-empty {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+.m-overview .body {
+  padding-top: 20rpx;
+}
+.m-overview .body .m-x-card {
+  padding-bottom: 20rpx;
+  display: block;
+}
+.m-overview .body .x-card .header .suffix {
+  flex: 1;
+  text-align: right;
+}
+.m-overview .body .x-card .content {
+  padding: 0 30rpx 30rpx;
+}
+.m-overview .body .x-card .content .ul {
+  display: flex;
+  box-align: center;
+  align-items: center;
+  padding-top: 10rpx;
+}
+.m-overview .body .x-card .content .li {
+  flex: 1;
+  border-right: 1rpx solid #E5E5E5;
+  padding-left: 40rpx;
+}
+.m-overview .body .x-card .content .li:first-child {
+  padding-left: 0;
+}
+.m-overview .body .x-card .content .li:last-child {
+  border-right: 0;
+}
+.m-overview .body .x-card .content .em {
+  color: #B2B2B2;
+  font-size: 24rpx;
+  display: flex;
+  box-align: center;
+  align-items: center;
+}
+.m-overview .body .x-card .content .em text {
+  padding-right: 10rpx;
+}
+.m-overview .body .x-card .content .p {
+  padding: 5rpx 0;
+}
+.m-overview .body .x-card .content .p text {
+  padding-right: 8rpx;
+}
+.m-overview .body .m-x-charts {
+  height: 500rpx;
+  position: relative;
+}

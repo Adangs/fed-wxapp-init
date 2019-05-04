@@ -1,0 +1,51 @@
+.x-navigation-bar .content {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #33cc99 url('https://okminer-static.oss-cn-hangzhou.aliyuncs.com/wxapp/2009pool/dev/login_bg1_img_nor%402x.png') no-repeat;
+  background-size: cover;
+  z-index: 9999;
+}
+.x-navigation-bar .placeholder {
+  height: 100rpx;
+}
+.x-navigation-bar .placeholder.is-refresh {
+  height: 0;
+}
+.x-navigation-bar .bar {
+  width: 100%;
+}
+.x-navigation-bar .title {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.x-navigation-bar .title .name {
+  height: 100%;
+  padding: 25rpx 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.x-navigation-bar .title .icon {
+  position: absolute;
+  padding: 0 25rpx;
+  width: 25rpx;
+  left: 0;
+  top: 0;
+  height: 100%;
+  text-align: left;
+}
+.x-navigation-bar .title .icon:active {
+  opacity: .8;
+}
+.x-navigation-bar .title .icon .x-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}

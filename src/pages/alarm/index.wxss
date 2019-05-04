@@ -1,0 +1,77 @@
+.m-alarm {
+  padding: 0 20rpx;
+}
+.m-alarm .tips {
+  font-size: 24rpx;
+  color: #B2B2B2;
+  padding: 20rpx 0;
+}
+.m-alarm .list .m-x-card {
+  padding-bottom: 32rpx;
+  display: block;
+}
+.m-alarm .x-card .header text {
+  padding-right: 40rpx;
+}
+.m-alarm .x-card .header text:last-child {
+  padding-right: 0;
+}
+.m-alarm .x-card .content {
+  padding: 20rpx;
+}
+.m-alarm .x-card .content .ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.m-alarm .x-card .content .li {
+  width: 50%;
+  display: flex;
+  box-align: center;
+  align-items: center;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.m-alarm .x-card .content .x-icon {
+  font-size: 56rpx;
+  width: 56rpx;
+  height: 56rpx;
+}
+.m-alarm .x-card .content .dl {
+  padding-left: 32rpx;
+}
+.m-alarm .x-card .content .dt {
+  color: #B2B2B2;
+  font-size: 26rpx;
+}
+.m-alarm .x-card .content .dd {
+  font-size: 34rpx;
+}
+.m-alarm .x-card .content .icon-005 {
+  color: #F7A23A;
+}
+.m-alarm .x-card .content .icon-006 {
+  color: #3978D3;
+}
+.m-alarm .x-card .content .icon-007 {
+  color: #FF6600;
+}
+.m-alarm .x-card .content .icon-008 {
+  color: #3A82FF;
+}
+.m-alarm .x-card .content .icon-009 {
+  color: #33CC99;
+}
+.m-alarm .x-card .content .icon-010 {
+  color: #8F57E9;
+}
+.m-alarm .x-card .footer {
+  padding: 12rpx 40rpx;
+}
+.m-alarm .x-card .footer .info {
+  color: #B2B2B2;
+  font-size: 26rpx;
+}
+.m-alarm .x-card .footer .time {
+  padding: 0 12rpx;
+  font-weight: bold;
+}

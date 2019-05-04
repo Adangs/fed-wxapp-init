@@ -1,0 +1,58 @@
+<!--src/pages/alarm/index.wxml-->
+<x-navigation-bar refresh="{{isRefresh}}">DEMO</x-navigation-bar>
+<view class="m-alarm">
+  <view class="tips">* 仅为您展示算力未恢复的告警通知。</view>
+  <view class="list">
+    <block wx:for="{{list}}" wx:key="{{item.accId}}">
+      <!-- 告警内容块 -->
+      <x-card class="m-x-card" line radius footer>
+        <view slot="header">
+          <text>{{item.date}}</text>
+          <text>{{item.time}}</text>
+        </view>
+        <view slot="content">
+          <view class="ul">
+            <view class="li">
+              <x-icon type="{{coin[item.coin]}}"></x-icon>
+              <view class="dl">
+                <view class="dt">币种</view>
+                <view class="dd">{{item.coin}}</view>
+              </view>
+            </view>
+            <view class="li">
+              <x-icon type="icon-008"></x-icon>
+              <view class="dl">
+                <view class="dt">账户名</view>
+                <view class="dd">
+                  <x-font-size value="{{item.accName}}" />
+                </view>
+              </view>
+            </view>
+            <view class="li">
+              <x-icon type="icon-009"></x-icon>
+              <view class="dl">
+                <view class="dt">工作矿机数</view>
+                <view class="dd">{{item.workingMiner}}</view>
+              </view>
+            </view>
+            <view class="li">
+              <x-icon type="icon-010"></x-icon>
+              <view class="dl">
+                <view class="dt">实时算力</view>
+                <view class="dd">
+                  <x-font-size value="{{item.hashrateFormat}}" />
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>  
+        <view slot="footer">
+          <text class="info">已持续低于您的告警值({{item.hashrateThreshold}}{{item.hashrateThresholdUnit}})</text>
+          <text class="time">{{item.durationThreshold}}min</text>
+        </view>
+      </x-card>
+    </block>
+  </view>
+</view>
+<!-- 无告警显示界面 -->
+<x-empty wx:if="{{isEmpty}}" src="https://okminer-static.oss-cn-hangzhou.aliyuncs.com/wxapp/2009pool/dev/alert_normal_img_nor%402x.png">哇！您的算力都正常哦~</x-empty>
